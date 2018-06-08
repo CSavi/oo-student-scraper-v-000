@@ -7,7 +7,7 @@ class Scraper
   def self.scrape_index_page(index_url)
     students_array = []
 
-    doc = Nokogiri::HTML(open('http://67.205.152.27:37358/fixtures/student-site/'))
+    doc = Nokogiri::HTML(open('http://67.205.182.198:41498/fixtures/student-site/'))
 
     cards = doc.css(".student-card")
     #return value is an array of hashes; ea hash reps a single student
