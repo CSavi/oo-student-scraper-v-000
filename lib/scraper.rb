@@ -5,7 +5,7 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-    student_array = []
+    students_array = []
 
     doc = Nokogiri::HTML(open('http://67.205.152.27:37358/fixtures/student-site/'))
 
@@ -18,9 +18,9 @@ class Scraper
         :location => card.css(".student-location").text,
         :profile_url => card.css("a").attribute("href").text
       }
-      student_array << student_hash
+      students_array << student_hash
     end
-    student_array
+    students_array
   end
 
   def self.scrape_profile_page(profile_url = 'http://67.205.152.27:37358/fixtures/student-site/students/ryan-johnson.html')
