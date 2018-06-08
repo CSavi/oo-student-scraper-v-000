@@ -9,7 +9,7 @@ class Student
      @@all << self
   end
 
-  def self.create_from_collection(students_array)
+  def self.create_from_collection(students_array)  #takes in an array of hashes 
     students_array.each {|student| Student.new(student)}
   end
 
